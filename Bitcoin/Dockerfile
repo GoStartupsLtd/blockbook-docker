@@ -29,4 +29,3 @@ ENTRYPOINT bitcoind -rpcuser="$RPC_USER" \
     --daemon && \
     sh run.sh 
 
-
