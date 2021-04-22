@@ -10,11 +10,14 @@ RUN wget https://bitcoin.org/bin/bitcoin-core-0.21.0/bitcoin-0.21.0-x86_64-linux
 RUN tar xzf bitcoin-0.21.0-x86_64-linux-gnu.tar.gz
 RUN install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.21.0/bin/*
 
+
 WORKDIR /home/blockbook
 
 RUN ./contrib/scripts/build-blockchaincfg.sh bitcoin
 
 COPY run.sh run.sh
+
+EXPOSE 9130
 
 ENTRYPOINT bitcoind -rpcuser="$RPC_USER" \
     -rpcpassword="$RPC_PASS" -server \

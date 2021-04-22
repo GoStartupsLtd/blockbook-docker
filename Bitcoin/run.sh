@@ -14,4 +14,4 @@ sed -i 's/\"rpc_url\":.*/\"rpc_url\": \"http:\/\/'${RPC_HOST}':'${RPC_PORT}'\",/
 sed -i 's/\"message_queue_binding\":.*/\"message_queue_binding\": \"tcp:\/\/'${RPC_HOST}':'${MQ_PORT}'\",/g' $CFG_FILE
 
 
-exec ./blockbook -sync -blockchaincfg=/home/blockbook/build/blockchaincfg.json -internal=:9030 -public=:9130 -debug
+exec ./blockbook -sync -blockchaincfg=/home/blockbook/build/blockchaincfg.json -debug
