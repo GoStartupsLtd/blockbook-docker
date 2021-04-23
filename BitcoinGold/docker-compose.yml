@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+    app:
+        image: gostartups/blockbook-bitcoingold:latest
+        restart: always
+        ports:
+            - '9135:9135'
+        volumes:
+            - /home/firebolt/btg-blockbook/chain:/home/.bitcoingold/
+            - /home/firebolt/btg-blockbook/data:/home/bitcoingold/data
