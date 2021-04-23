@@ -5,6 +5,7 @@ WORKDIR /home/bitcoin
 
 ENV RPC_USER=user
 ENV RPC_PASS=pass
+ENV RPC_PORT=8332
 
 RUN wget https://bitcoin.org/bin/bitcoin-core-0.21.0/bitcoin-0.21.0-x86_64-linux-gnu.tar.gz
 RUN tar xzf bitcoin-0.21.0-x86_64-linux-gnu.tar.gz
@@ -21,6 +22,7 @@ EXPOSE 9130
 
 ENTRYPOINT bitcoind -rpcuser="$RPC_USER" \
     -rpcpassword="$RPC_PASS" -server \
+    -rpcport="$RPC_PORT" \
     -zmqpubhashblock="tcp://localhost:29000" \
     -zmqpubhashtx="tcp://localhost:29000" \
     -zmqpubrawblock="tcp://localhost:29000" \
