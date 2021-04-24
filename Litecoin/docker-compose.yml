@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+    app:
+        image: gostartups/blockbook-litecoin:latest
+        restart: always
+        ports:
+            - '9134:9134'
+        volumes:
+            - /home/firebolt/blockbook/LTC/chain:/root/.litecoin
+            - /home/firebolt/blockbook/LTC/data:/home/litecoin/data

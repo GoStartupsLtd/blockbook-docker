@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+    app:
+        image: gostartups/blockbook-dogecoin:latest
+        restart: always
+        ports:
+            - '9138:9138'
+        volumes:
+            - /home/firebolt/blockbook/DOGE/chain:/root/.dogecoin
+            - /home/firebolt/blockbook/DOGE/data:/home/dogecoin/data

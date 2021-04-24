@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+    app:
+        image: gostartups/blockbook-bitcoin-testnet:latest
+        restart: always
+        ports:
+            - '19130:19130'
+        volumes:
+            - /home/firebolt/blockbook/TBTC/chain:/root/.bitcoin
+            - /home/firebolt/blockbook/TBTC/data:/home/bitcoin_testnet/data

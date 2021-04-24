@@ -16,4 +16,6 @@ RUN ./contrib/scripts/build-blockchaincfg.sh ethereum
 
 COPY run.sh run.sh
 
+EXPOSE 9136
+
 ENTRYPOINT  sh run.sh 

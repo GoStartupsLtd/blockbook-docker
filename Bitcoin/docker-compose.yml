@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+    app:
+        image: gostartups/blockbook-bitcoin:latest
+        restart: always
+        ports:
+            - '9130:9130'
+        volumes:
+            - /home/firebolt/blockbook/BTC/chain:/root/.bitcoin
+            - /home/firebolt/blockbook/BTC/data:/home/bitcoin/data

@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+    app:
+        image: gostartups/blockbook-ethereum:latest
+        restart: always
+        ports:
+            - '9136:9136'
+        volumes:
+            - /home/firebolt/blockbook/ETH/chain:/root/.ethereum
+            - /home/firebolt/blockbook/ETH/data:/home/ethereum/data
