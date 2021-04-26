@@ -8,4 +8,4 @@ services:
             - '9138:9138'
         volumes:
             - /home/firebolt/blockbook/DOGE/chain:/root/.dogecoin
-            - /home/firebolt/blockbook/DOGE/data:/home/dogecoin/data
+            - /home/firebolt/blockbook/DOGE/data:/home/blockbook/data

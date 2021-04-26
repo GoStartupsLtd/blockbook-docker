@@ -8,4 +8,4 @@ services:
             - '9136:9136'
         volumes:
             - /home/firebolt/blockbook/ETH/chain:/root/.ethereum
-            - /home/firebolt/blockbook/ETH/data:/home/ethereum/data
+            - /home/firebolt/blockbook/ETH/data:/home/blockbook/data

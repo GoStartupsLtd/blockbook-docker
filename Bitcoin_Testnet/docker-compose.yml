@@ -8,4 +8,4 @@ services:
             - '19130:19130'
         volumes:
             - /home/firebolt/blockbook/TBTC/chain:/root/.bitcoin
-            - /home/firebolt/blockbook/TBTC/data:/home/bitcoin_testnet/data
+            - /home/firebolt/blockbook/TBTC/data:/home/blockbook/data

@@ -8,4 +8,4 @@ services:
             - '9135:9135'
         volumes:
             - /home/firebolt/btg-blockbook/chain:/root/.bitcoingold
-            - /home/firebolt/btg-blockbook/data:/home/bitcoingold/data
+            - /home/firebolt/btg-blockbook/data:/home/blockbook/data

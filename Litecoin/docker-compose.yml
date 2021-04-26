@@ -8,4 +8,4 @@ services:
             - '9134:9134'
         volumes:
             - /home/firebolt/blockbook/LTC/chain:/root/.litecoin
-            - /home/firebolt/blockbook/LTC/data:/home/litecoin/data
+            - /home/firebolt/blockbook/LTC/data:/home/blockbook/data

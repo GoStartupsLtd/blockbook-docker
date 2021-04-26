@@ -8,4 +8,4 @@ services:
             - '9130:9130'
         volumes:
             - /home/firebolt/blockbook/BTC/chain:/root/.bitcoin
-            - /home/firebolt/blockbook/BTC/data:/home/bitcoin/data
+            - /home/firebolt/blockbook/BTC/data:/home/blockbook/data
