@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+    app:
+        image: gostartups/blockbookonly-litecoin:latest
+        restart: always
+        ports:
+            - '9134:9134'
+        environment: 
+            - RPC_HOST=node
+            - RPC_USER=user
+            - RPC_PASS=pass
+            - RPC_PORT=9332
+        volumes:
+            - ~/blockbook/LTC/data:/home/blockbook/data
+
+    node:
+        image: gostartups/litecoin-core:latest
+        restart: always
+        ports:
+            - '9332:9332'
+        environment: 
+            - RPC_ALLOW_IP=0.0.0.0/0
+            - ZMQ_ADDRESS=node
+            - RPC_PORT=9332
+            - RPC_USER=user
+            - RPC_PASS=pass
+        volumes:
+            - ~/blockbook/LTC/chain:/root/.dogecoin

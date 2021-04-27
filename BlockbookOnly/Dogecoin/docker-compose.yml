@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+    app:
+        image: gostartups/blockbookonly-dogecoin:latest
+        restart: always
+        ports:
+            - '9138:9138'
+        environment: 
+            - RPC_HOST=node
+            - RPC_USER=user
+            - RPC_PASS=pass
+            - RPC_PORT=22555
+        volumes:
+            - ~/blockbook/DOGE/data:/home/blockbook/data
+
+    node:
+        image: gostartups/dogecoin-core:latest
+        restart: always
+        ports:
+            - '22555:22555'
+        environment: 
+            - RPC_ALLOW_IP=0.0.0.0/0
+            - ZMQ_ADDRESS=node
+            - RPC_PORT=22555
+            - RPC_USER=user
+            - RPC_PASS=pass
+        volumes:
+            - ~/blockbook/DOGE/chain:/root/.dogecoin

@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+    app:
+        image: gostartups/blockbookonly-bitcoingold:latest
+        restart: always
+        ports:
+            - '9135:9135'
+        environment: 
+            - RPC_HOST=node
+            - RPC_USER=user
+            - RPC_PASS=pass
+            - RPC_PORT=8337
+        volumes:
+            - ~/blockbook/BTG/data:/home/blockbook/data
+
+    node:
+        image: gostartups/bitcoingold-core:latest
+        restart: always
+        ports:
+            - '8337:8337'
+        environment: 
+            - RPC_ALLOW_IP=0.0.0.0/0
+            - ZMQ_ADDRESS=node
+            - RPC_PORT=8337
+            - RPC_USER=user
+            - RPC_PASS=pass
+        volumes:
+            - ~/blockbook/BTG/chain:/root/.bitcoingold

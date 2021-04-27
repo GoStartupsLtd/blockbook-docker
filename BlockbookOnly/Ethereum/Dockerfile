@@ -1,14 +1,7 @@
 FROM gostartups/blockbook-build
 
-
-WORKDIR /home/ethereum
-
-RUN git clone https://github.com/ethereum/go-ethereum && \
-    cd go-ethereum && \
-    make geth 
-
-
-RUN cp /home/ethereum/go-ethereum/build/bin/geth /usr/local/bin/
+ENV RPC_PORT=8545
+ENV RPC_HOST=localhost
 
 WORKDIR /home/blockbook
 

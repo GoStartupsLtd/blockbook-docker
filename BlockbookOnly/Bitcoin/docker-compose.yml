@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+    app:
+        image: gostartups/blockbookonly-bitcoin:latest
+        restart: always
+        ports:
+            - '9130:9130'
+        environment: 
+            - RPC_HOST=node
+            - RPC_USER=user
+            - RPC_PASS=pass
+            - RPC_PORT=8332
+        volumes:
+            - ~/blockbook/BTC/data:/home/blockbook/data
+
+    node:
+        image: gostartups/bitcoin-core:latest
+        restart: always
+        ports:
+            - '8332:8332'
+            - '29000:29000'
+        environment: 
+            - RPC_ALLOW_IP=0.0.0.0/0
+            - ZMQ_ADDRESS=node
+            - RPC_PORT=8332
+            - RPC_USER=user
+            - RPC_PASS=pass
+        volumes:
+            - ~/blockbook/BTC/chain:/root/.bitcoin
