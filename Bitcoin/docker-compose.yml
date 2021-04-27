@@ -7,5 +7,5 @@ services:
         ports:
             - '9130:9130'
         volumes:
-            - /home/firebolt/blockbook/BTC/chain:/root/.bitcoin
-            - /home/firebolt/blockbook/BTC/data:/home/blockbook/data
+            - ~/blockbook/BTC/chain:/root/.bitcoin
+            - ~/blockbook/BTC/data:/home/blockbook/data

@@ -4,6 +4,7 @@ ENV RPC_USER=user
 ENV RPC_PASS=pass
 ENV RPC_PORT=9332
 ENV RPC_HOST=localhost
+ENV BLOCKBOOK_PORT=9134
 
 WORKDIR /home/blockbook
 

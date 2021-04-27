@@ -6,6 +6,7 @@ WORKDIR /home/dogecoin
 ENV RPC_USER=user
 ENV RPC_PASS=pass
 ENV RPC_PORT=22555
+ENV BLOCKBOOK_PORT=9138
 
 RUN wget https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-x86_64-linux-gnu.tar.gz
 RUN tar xzf dogecoin-1.14.3-x86_64-linux-gnu.tar.gz

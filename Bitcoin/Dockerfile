@@ -6,6 +6,7 @@ WORKDIR /home/bitcoin
 ENV RPC_USER=user
 ENV RPC_PASS=pass
 ENV RPC_PORT=8332
+ENV BLOCKBOOK_PORT=9130
 
 RUN wget https://bitcoin.org/bin/bitcoin-core-0.21.0/bitcoin-0.21.0-x86_64-linux-gnu.tar.gz
 RUN tar xzf bitcoin-0.21.0-x86_64-linux-gnu.tar.gz

@@ -6,6 +6,7 @@ WORKDIR /home/litecoin
 ENV RPC_USER=user
 ENV RPC_PASS=pass
 ENV RPC_PORT=9332
+ENV BLOCKBOOK_PORT=9134
 
 RUN wget https://download.litecoin.org/litecoin-0.18.1/linux/litecoin-0.18.1-x86_64-linux-gnu.tar.gz
 RUN tar xzf litecoin-0.18.1-x86_64-linux-gnu.tar.gz

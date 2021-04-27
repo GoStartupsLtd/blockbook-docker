@@ -3,6 +3,8 @@ FROM gostartups/blockbook-build
 
 WORKDIR /home/ethereum
 
+ENV BLOCKBOOK_PORT=9136
+
 RUN git clone https://github.com/ethereum/go-ethereum && \
     cd go-ethereum && \
     make geth 

@@ -6,6 +6,7 @@ WORKDIR /home/bitcoingold
 ENV RPC_USER=user
 ENV RPC_PASS=pass
 ENV RPC_PORT=8332
+ENV BLOCKBOOK_PORT=9135
 
 RUN wget https://github.com/BTCGPU/BTCGPU/releases/download/v0.17.3/bitcoin-gold-0.17.3-x86_64-linux-gnu.tar.gz
 RUN tar xzf bitcoin-gold-0.17.3-x86_64-linux-gnu.tar.gz
