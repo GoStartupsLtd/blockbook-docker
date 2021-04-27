@@ -20,9 +20,8 @@ services:
             - '9332:9332'
         environment: 
             - RPC_ALLOW_IP=0.0.0.0/0
-            - ZMQ_ADDRESS=node
-            - RPC_PORT=9332
             - RPC_USER=user
             - RPC_PASS=pass
+            - RPC_PORT=9332
         volumes:
-            - ~/blockbook/LTC/chain:/root/.dogecoin
+            - ~/blockbook/LTC/chain:/root/.litecoin
