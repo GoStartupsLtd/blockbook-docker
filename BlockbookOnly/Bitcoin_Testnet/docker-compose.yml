@@ -17,8 +17,8 @@ services:
         image: gostartups/bitcoin-core:latest
         restart: always
         ports:
-            - '8332:8332'
-            - '29000:29000'
+            - '18332:18332'
+            - '29001:29001'
         environment: 
             - RPC_ALLOW_IP=0.0.0.0/0
             - ZMQ_ADDRESS=node
