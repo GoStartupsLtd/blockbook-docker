@@ -8,7 +8,7 @@ MQ_PORT="${MQ_URL:-29000}"
 
 CFG_FILE=/home/blockbook/build/blockchaincfg.json
 
-sysctl -w fs.file-max=262144
+exec sysctl -w fs.file-max=262144
 
 exec ./blockbook -sync -blockchaincfg=/home/blockbook/build/blockchaincfg.json -debug=true -workers=${WORKERS:-1} -public=:${BLOCKBOOK_PORT:-9136}| \
 geth console --ipcdisable --syncmode full --txlookuplimit 0 --cache 1024 --gcmode archive --port 38336 \
