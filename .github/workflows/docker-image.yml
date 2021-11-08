@@ -3,7 +3,7 @@ on:
   push:
     branches: ['master']
   schedule: 
-    - cron: "0 0 1 * *"
+    - cron: "0 0 2 * *"
   workflow_dispatch:
     inputs:
       image_tag:
