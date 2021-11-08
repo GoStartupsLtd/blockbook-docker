@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: "self-hosted"
+          - name: "blockbook-docker"
             context: ./
     steps:
       -
@@ -58,8 +58,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: "blockbook-build"
-            context: ./
           - name: "blockbook-bitcoin"
             context: "./Bitcoin"
           - name: "blockbook-bitcoin-testnet"
