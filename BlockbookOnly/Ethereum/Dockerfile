@@ -10,8 +10,7 @@ RUN ./contrib/scripts/build-blockchaincfg.sh ethereum
 
 COPY run.sh run.sh
 
-EXPOSE 9136
-EXPOSE 8036
-EXPOSE 8136
+EXPOSE ${BLOCKBOOK_PORT}
+EXPOSE 9036
 
 ENTRYPOINT  sh run.sh 
