@@ -13,4 +13,4 @@ sed -i 's/\"rpc_url\":.*/\"rpc_url\": \"http:\/\/'${RPC_HOST}':'${RPC_PORT}'\",/
 
 
 
-exec ./blockbook -sync -blockchaincfg=/home/blockbook/build/blockchaincfg.json -workers=${WORKERS:-1} -public=:${BLOCKBOOK_PORT:-9134}
+exec ./blockbook -sync -blockchaincfg=/home/blockbook/build/blockchaincfg.json -workers=${WORKERS:-1} -public=:${BLOCKBOOK_PORT:-9134} -logtostderr

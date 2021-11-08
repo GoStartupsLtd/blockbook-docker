@@ -15,4 +15,4 @@ sed -i 's/\"message_queue_binding\":.*/\"message_queue_binding\": \"tcp:\/\/'${R
 
 
 
-exec ./blockbook -sync -blockchaincfg=/home/blockbook/build/blockchaincfg.json -debug -workers=${WORKERS:-1} -public=:${BLOCKBOOK_PORT:-9134}
+exec ./blockbook -sync -blockchaincfg=/home/blockbook/build/blockchaincfg.json -debug -workers=${WORKERS:-1} -public=:${BLOCKBOOK_PORT:-9134} -logtostderr
