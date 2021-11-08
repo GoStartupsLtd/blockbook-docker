@@ -53,8 +53,8 @@ jobs:
           tags: gostartups/${{ matrix.name }}:${{ github.event.inputs.image_tag }}
           
   build_blockbook_for_coins:
-    needs: build_blockbook
-    runs-on: self-hosted
+#     needs: build_blockbook
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         include:
