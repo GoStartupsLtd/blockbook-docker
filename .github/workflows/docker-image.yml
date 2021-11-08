@@ -1,4 +1,4 @@
-name: Create and publish the coin's containers
+name: Create and publish the blockbook's containers
 on:
   push:
     branches: ['master']
@@ -12,8 +12,8 @@ on:
         default: 'latest'
     
 jobs:
-  build_coins:
-    runs-on: self-hosted
+  build_blockbook:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         include:
