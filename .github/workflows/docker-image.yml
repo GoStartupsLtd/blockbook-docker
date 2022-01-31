@@ -76,6 +76,8 @@ jobs:
             context: "./BlockbookOnly/Bitcoin"
           - name: "blockbookonly-bitcoin-testnet"
             context: "./BlockbookOnly/Bitcoin_Testnet"
+          - name: "blockbook-bitcoincash"
+            context: "./BlockbookOnly/BitcoinCash"
           - name: "blockbookonly-litecoin"
             context: "./BlockbookOnly/Litecoin"
           - name: "blockbookonly-dogecoin"

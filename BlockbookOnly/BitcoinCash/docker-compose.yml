@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+    app:
+        image: gostartups/blockbookonly-bitcoincash:latest
+        restart: always
+        ports:
+            - '9130:9130'
+        environment: 
+            - RPC_HOST=node
+            - RPC_USER=user
+            - RPC_PASS=pass
+            - RPC_PORT=8355
+        volumes:
+            - ~/blockbook/BCH/data:/home/blockbook/data
+
+    node:
+        image: gostartups/bitcoin-core:latest
+        restart: always
+        ports:
+            - '8355:8355'
+        environment: 
+            - RPC_ALLOW_IP=0.0.0.0/0
+            - ZMQ_ADDRESS=node
+            - RPC_PORT=8355
+            - RPC_USER=user
+            - RPC_PASS=pass
+        volumes:
+            - ~/blockbook/BCH/chain:/root/.bitcoincash
