@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+    app:
+        image: gostartups/blockbookonly-hydra:latest
+        restart: always
+        ports:
+            - '9197:9197'
+        environment: 
+            - RPC_HOST=node
+            - RPC_USER=user
+            - RPC_PASS=pass
+            - RPC_PORT=3389
+        volumes:
+            - ~/blockbook/HYDRA/data:/home/blockbook/data
+
+    node:
+        image: hydrablockchain/node:latest
+        restart: always
+        ports:
+            - '3389:3389'
+        environment: 
+            - RPC_ALLOW_IP=0.0.0.0/0
+            - RPC_USER=user
+            - RPC_PASS=pass
+            - RPC_PORT=3389
+        volumes:
+            - ~/blockbook/HYDRA/chain:/root/.hydra

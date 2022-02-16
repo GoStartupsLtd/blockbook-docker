@@ -80,6 +80,8 @@ jobs:
             context: "./BlockbookOnly/BitcoinCash"
           - name: "blockbookonly-litecoin"
             context: "./BlockbookOnly/Litecoin"
+          - name: "blockbookonly-hydra"
+            context: "./BlockbookOnly/Hydra"
           - name: "blockbookonly-dogecoin"
             context: "./BlockbookOnly/Dogecoin"
           - name: "blockbookonly-ethereum"
