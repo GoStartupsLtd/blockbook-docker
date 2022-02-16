@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: "blockbook-docker"
+          - name: "blockbook-build"
             context: ./
     steps:
       -
