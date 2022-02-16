@@ -1,4 +1,4 @@
-FROM gostartups/golang-rocksdb-zeromq
+FROM gostartups/golang-rocksdb-zeromq:latest
 
 WORKDIR /home
 # Build blockbook
