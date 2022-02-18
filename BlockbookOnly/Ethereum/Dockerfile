@@ -3,7 +3,6 @@ FROM gostartups/blockbook-build
 ENV RPC_PORT=8545
 ENV RPC_HOST=localhost
 ENV BLOCKBOOK_PORT=9136
-ENV EXTRAFLAGS= 
 
 WORKDIR /home/blockbook
 
