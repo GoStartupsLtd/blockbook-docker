@@ -4,7 +4,7 @@ services:
         image: gostartups/blockbookonly-brise:latest
         restart: always
         ports:
-            - '9136:9136'
+            - '9122:9122'
         environment: 
             - RPC_HOST=node
             - RPC_PORT=8545
