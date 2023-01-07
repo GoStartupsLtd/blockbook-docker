@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+    app:
+        image: gostartups/blockbookonly-brise:latest
+        restart: always
+        ports:
+            - '9136:9136'
+        environment: 
+            - RPC_HOST=node
+            - RPC_PORT=8545
+            - WS_PORT=8036
+        volumes:
+            - ~/blockbook/BRISE/data:/home/blockbook/data
+    node:
+        image: gostartups/brise-core:latest
+        restart: always
+        ports:
+            - '8545:8545'
+            - '8036:8036'
+            - '30303:30303'
+        volumes:
+            - ~/blockbook/BRISE/chain:/root/.ethereum

@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+    app:
+        image: gostartups/blockbook-brise:latest
+        restart: always
+        ports:
+            - '9122:9122'
+        volumes:
+            - /home/firebolt/blockbook/BRISE/chain:/root/.ethereum
+            - /home/firebolt/blockbook/BRISE/data:/home/blockbook/data
