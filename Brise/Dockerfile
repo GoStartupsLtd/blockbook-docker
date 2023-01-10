@@ -9,7 +9,7 @@ RUN go run build/ci.go install -static ./cmd/geth
 
 FROM blockbook
 ENV DATA_DIR=/root/node
-COPY --from=BUILDER /geth/build/bin/getxh /usr/local/bin/
+COPY --from=BUILDER /geth/build/bin/geth /usr/local/bin/
 
 WORKDIR /home/blockbook
 RUN ./contrib/scripts/build-blockchaincfg.sh brise
