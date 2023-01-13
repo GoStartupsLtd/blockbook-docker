@@ -17,6 +17,5 @@ services:
         ports:
             - '8545:8545'
             - '8036:8036'
-            - '30303:30303'
         volumes:
             - ~/blockbook/BRISE/chain:/root/.ethereum

@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
     app:
-        image: gostartups/blockbook-brise:latest
+        build: .
         restart: always
         ports:
             - '9122:9122'

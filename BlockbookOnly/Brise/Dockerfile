@@ -1,4 +1,4 @@
-FROM blockbook
+FROM gostartups/blockbook-build
 
 WORKDIR /home/blockbook
 
