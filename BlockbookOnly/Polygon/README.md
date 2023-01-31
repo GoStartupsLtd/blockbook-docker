@@ -37,8 +37,7 @@ Blockbook Ports:
 
 Node Ports:
 
-1. 30303 - Network discovery bootnodes port
-2. 8545 - RPC port
-3. 8546 - WS port
+2. 8549 - RPC port
+3. 8548 - WS port
 4. 26656 - Seeds port
 ---
