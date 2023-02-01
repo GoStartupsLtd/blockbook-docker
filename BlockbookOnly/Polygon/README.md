@@ -33,11 +33,10 @@ Steps to set up:
 ## Ports:
 Blockbook Ports:
 
-1. 9144 - Blockbook explorer
+1. 9199 - Blockbook explorer
 
 Node Ports:
 
-2. 8549 - RPC port
-3. 8548 - WS port
-4. 26656 - Seeds port
+2. 8099 - RPC port
+3. 8098 - WS port
 ---
