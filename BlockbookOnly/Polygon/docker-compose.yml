@@ -4,7 +4,7 @@ services:
         image: gostartups/blockbookonly-polygon:latest
         restart: always
         ports:
-            - '9144:9144'
+            - '9199:9199'
         environment:
             - RPC_HOST=node
             - RPC_PORT=8549
