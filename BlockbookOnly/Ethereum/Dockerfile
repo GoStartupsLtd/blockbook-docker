@@ -1,4 +1,4 @@
-FROM gostartups/blockbook-build
+FROM gostartups/blockbook-build:eth2
 
 ENV RPC_PORT=8545
 ENV RPC_HOST=localhost

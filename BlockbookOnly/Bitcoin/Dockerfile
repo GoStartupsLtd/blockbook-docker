@@ -1,4 +1,4 @@
-FROM gostartups/blockbook-build
+FROM gostartups/blockbook-build:trezor
 
 ENV RPC_USER=user
 ENV RPC_PASS=pass

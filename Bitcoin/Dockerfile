@@ -1,4 +1,4 @@
-FROM gostartups/blockbook-build
+FROM gostartups/blockbook-build:trezor
 
 WORKDIR /home/bitcoin
 
