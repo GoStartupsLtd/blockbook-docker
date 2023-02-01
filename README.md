@@ -2,7 +2,7 @@
 
 | Node | Default Blockbook Port
 | :-: | :-: |
-| Arbitrum            | 9137 |
+| Arbitrum            | 9198 |
 | Bitcoin             | 9130 |
 | Bitcoin_Testnet     | 19130|
 | BitcoinGold         | 9135 |
@@ -11,4 +11,4 @@
 | DogeCoin            | 9138 |
 | Ethereum            | 9136 |
 | Litecoin            | 9134 |
-| Polygon             | 9144 |
+| Polygon             | 9199 |
