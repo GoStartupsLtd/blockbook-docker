@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+    app:
+        image: gostartups/blockbookonly-polygon:latest
+        restart: always
+        ports:
+            - '9199:9199'
+        environment:
+            - RPC_HOST=node
+            - RPC_PORT=8549
+        volumes:
+            - ~/blockbook/ETH/data:/home/blockbook/data
+
+    node:
+        image: gostartups/polygon-core:latest
+        restart: always
+        ports:
+            - '8549:8549'
+            - '8548:8548'
+            - '26656:26656'
+        environment: 
+            - ADDRESS=0.0.0.0
+            - HTTP_PORT=8549
+            - PORT=30303
+            - WS_PORT=8548
+        volumes:
+            - ~/blockbook/ETH/chain:/root/.ethereum
