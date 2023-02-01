@@ -1,6 +1,6 @@
 FROM gostartups/blockbook-build
 
-ENV BLOCKBOOK_PORT=9144
+ENV BLOCKBOOK_PORT=9198
 
 WORKDIR /home/blockbook
 

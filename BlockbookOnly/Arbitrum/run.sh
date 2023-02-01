@@ -13,4 +13,4 @@ sed -i 's/\"rpc_url\":.*/\"rpc_url\": \"ws:\/\/'${WS_RPC_HOST}':'${WS_RPC_PORT}'
 #HTTP - If WS is down
 #sed -i 's/\"rpc_url\":.*/\"rpc_url\": \"http:\/\/'${HTTP_RPC_HOST}':'${HTTP_RPC_PORT}'\",/g' $CFG_FILE
 
-exec ./blockbook -sync -blockchaincfg=/home/blockbook/build/blockchaincfg.json -debug=true -workers=${WORKERS:-1} -public=:${BLOCKBOOK_PORT:-9137} -logtostderr
+exec ./blockbook -sync -blockchaincfg=/home/blockbook/build/blockchaincfg.json -debug=true -workers=${WORKERS:-1} -public=:${BLOCKBOOK_PORT:-9198} -logtostderr
